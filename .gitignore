@@ -1,0 +1,14 @@
+/vendor/
+/node_modules/
+/storage/*
+/public_html/media/
+/public_html/cpresources/
+/config/license.key
+.env
+.env.*
+!.env.example
+/auth.json
+*.sql
+*.sql.gz
+*.zip
+.DS_Store
