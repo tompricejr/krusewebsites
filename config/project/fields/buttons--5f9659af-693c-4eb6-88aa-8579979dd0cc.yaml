@@ -1,0 +1,33 @@
+contentColumnType: string
+fieldGroup: 1761563f-1ea0-4928-9b92-302f04606f4d
+handle: buttons
+instructions: ''
+name: Buttons
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - 4d92ec56-9694-4dd8-bd99-41e98b65604b
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 520227e7-1c05-4292-8df4-802798ebd604
+        -
+          __assoc__:
+            -
+              - width
+              - 200px
+  contentTable: '{{%stc_buttons}}'
+  fieldLayout: table
+  maxRows: ''
+  minRows: ''
+  propagationMethod: none
+  selectionLabel: 'Add button'
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

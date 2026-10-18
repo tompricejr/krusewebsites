@@ -1,0 +1,9 @@
+baseUrl: $SHOW_STRING_URL
+enabled: true
+handle: westernmilling
+hasUrls: true
+language: en-US
+name: 'Western Milling'
+primary: false
+siteGroup: 410b63a4-65f9-4258-b5fc-f235c2bfea61
+sortOrder: 6

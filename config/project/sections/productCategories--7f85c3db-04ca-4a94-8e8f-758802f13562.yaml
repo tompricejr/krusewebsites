@@ -1,0 +1,47 @@
+defaultPlacement: end
+enableVersioning: true
+handle: productCategories
+name: 'Product categories'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: custom
+siteSettings:
+  2b2bab0c-f9a7-4a82-b0a1-47876db3749d:
+    enabledByDefault: true
+    hasUrls: true
+    template: product-overview
+    uriFormat: 'products/{slug}'
+  3883112e-913f-4ce3-813b-158b9fd7bab7:
+    enabledByDefault: false
+    hasUrls: true
+    template: product-overview
+    uriFormat: 'products/{slug}'
+  92274106-26ee-40d6-9d71-785161bc4316:
+    enabledByDefault: false
+    hasUrls: true
+    template: product-overview
+    uriFormat: 'products/{slug}'
+  c7993fbf-7243-4eea-ab9a-6451f93d756f:
+    enabledByDefault: false
+    hasUrls: true
+    template: product-overview
+    uriFormat: 'products/{slug}'
+  e7a6b270-069f-4fb0-8ad0-ce04bd129e46: # Western Milling
+    enabledByDefault: false
+    hasUrls: true
+    template: product-overview
+    uriFormat: 'products/{slug}'
+structure:
+  maxLevels: 2
+  uid: df3b85c1-76b7-44e8-bd12-1687e3b142bf
+type: structure

@@ -1,0 +1,112 @@
+contentColumnType: text
+fieldGroup: 33d27ffd-546a-4a4f-9768-4f7b049a6f0b
+handle: bannerLink
+instructions: ''
+name: Link
+searchable: false
+settings:
+  allowCustomText: '1'
+  allowTarget: '1'
+  allowedLinkNames:
+    1: asset
+    3: entry
+    7: email
+    8: tel
+    9: url
+  autoNoReferrer: ''
+  defaultLinkName: entry
+  defaultText: ''
+  enableAriaLabel: ''
+  enableTitle: ''
+  typeSettings:
+    __assoc__:
+      -
+        - asset
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+            -
+              - allowCustomQuery
+              - ''
+      -
+        - category
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+            -
+              - allowCustomQuery
+              - ''
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+            -
+              - allowCustomQuery
+              - ''
+      -
+        - site
+        -
+          __assoc__:
+            -
+              - sites
+              - '*'
+      -
+        - user
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+            -
+              - allowCustomQuery
+              - ''
+      -
+        - custom
+        -
+          __assoc__:
+            -
+              - disableValidation
+              - ''
+            -
+              - allowAliases
+              - ''
+      -
+        - email
+        -
+          __assoc__:
+            -
+              - disableValidation
+              - ''
+            -
+              - allowAliases
+              - ''
+      -
+        - tel
+        -
+          __assoc__:
+            -
+              - disableValidation
+              - ''
+            -
+              - allowAliases
+              - ''
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - disableValidation
+              - ''
+            -
+              - allowAliases
+              - ''
+translationKeyFormat: null
+translationMethod: site
+type: typedlinkfield\fields\LinkField

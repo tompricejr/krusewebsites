@@ -1,0 +1,11 @@
+contentColumnType: string(7)
+fieldGroup: 1a8c998d-16c0-4964-854a-4901e87fa937
+handle: articleColor
+instructions: 'This value will overwrite the color set by the related category. Useful when there are no categories but a background color is needed.'
+name: 'Article color'
+searchable: false
+settings:
+  defaultColor: ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Color

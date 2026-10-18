@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html itemscope itemtype="https://schema.org/WebPage" lang="en-EN">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Kruse Website Manager</title>
+
+	<!-- Responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="MobileOptimized" content="320">
+	<meta name="robots" content="noindex">
+
+	<!-- Internet Explorer / Edge -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link href="/css/general.css?ckcachebust=8469aff6cc470f65bd5f1e4b175e8f55" rel="stylesheet">
+</head>
+
+<body class="websitemanager">
+	<svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><use xlink:href="/svg/icons.svg"></use></svg>
+
+	<div class="">
+		<img src="/img/kruse-logo.svg" alt="" class="logo">
+
+		<ul class="sites">
+		{% set sites = craft.app.sites.getAllSites() | without(currentSite) %}
+		{% for site in sites %}
+			{% set color = craft.app.globals.getSetByHandle('settings', site.id).defaultColors.brandColor %}
+			<li><a href="{{ siteUrl(siteId=site.id) }}" class="button medium black" style="background: {{ color }};"><span>{{ site.name }}</span></a></li>
+		{% endfor %}
+		</ul>
+	</div>
+</body>
+</html>

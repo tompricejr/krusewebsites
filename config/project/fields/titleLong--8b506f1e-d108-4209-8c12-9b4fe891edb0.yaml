@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 1761563f-1ea0-4928-9b92-302f04606f4d
+handle: titleLong
+instructions: ''
+name: 'Title long'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

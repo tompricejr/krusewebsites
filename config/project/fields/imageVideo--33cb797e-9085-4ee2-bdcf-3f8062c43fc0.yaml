@@ -1,0 +1,29 @@
+contentColumnType: string
+fieldGroup: 1761563f-1ea0-4928-9b92-302f04606f4d
+handle: imageVideo
+instructions: ''
+name: 'Image or embedded video'
+searchable: false
+settings:
+  allowedKinds:
+    - image
+    - json
+  defaultUploadLocationSource: 'volume:adb77d58-066b-4ab9-b058-d5d7d19c3b34'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: '1'
+  restrictFiles: '1'
+  selectionLabel: 'Select image or embedded video'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:adb77d58-066b-4ab9-b058-d5d7d19c3b34'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: ''
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

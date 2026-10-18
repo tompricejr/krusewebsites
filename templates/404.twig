@@ -1,0 +1,22 @@
+{# Body color #}
+{% set bodyColor = '' %}
+
+{% extends "01-settings/_layout" %}
+{% block content %}
+{# ================================== Content ============================================== #}
+
+{# Hero #}
+{% include '03-components/_hero.twig' with {
+	'titleShort': '404 error',
+	'titleLong': 'The page you’re looking for can’t be found.'
+} %}
+
+{# Content blocks #}
+<div class="textBlock container" style="text-align: center;">
+	<a href="{{ siteUrl }}" class="button small">
+		<span>Go to the homepage</span>
+	</a>
+</div>
+
+{# =============================== /END Content ============================================ #}
+{% endblock %}

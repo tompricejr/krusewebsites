@@ -1,0 +1,7 @@
+handle: kruseWebsiteManagerPlaceholder
+hasTitleField: false
+name: 'Kruse Website Manager placeholder'
+section: 6e0c1622-6b58-4eae-b32b-9a357d8646a0
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleLabel: null

@@ -1,0 +1,65 @@
+field: 2139379e-ad7e-4fda-995e-69fbcf84ae8a
+fieldLayouts:
+  be0c3f01-523f-4dec-85f4-aeb36f093bc7:
+    tabs:
+      -
+        fields:
+          abdbdab1-a4f2-433f-a6fa-0123a9507ef3:
+            required: false
+            sortOrder: 2
+          f66444e1-35a8-4e11-a718-5ef2ef60651c:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  abdbdab1-a4f2-433f-a6fa-0123a9507ef3:
+    contentColumnType: text
+    fieldGroup: null
+    handle: imageCaption
+    instructions: ''
+    name: 'Image caption'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '2'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  f66444e1-35a8-4e11-a718-5ef2ef60651c:
+    contentColumnType: string
+    fieldGroup: null
+    handle: selectedImage
+    instructions: ''
+    name: 'Select image'
+    searchable: false
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:adb77d58-066b-4ab9-b058-d5d7d19c3b34'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: '1'
+      restrictFiles: '1'
+      selectionLabel: 'Select image'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:adb77d58-066b-4ab9-b058-d5d7d19c3b34'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: imageBlock
+name: Image
+sortOrder: 3

@@ -1,0 +1,7 @@
+handle: error404
+hasTitleField: false
+name: 'Error 404'
+section: e5e36a77-ffe9-4e6e-8038-15dc667bd039
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleLabel: null

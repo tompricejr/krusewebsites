@@ -1,0 +1,9 @@
+baseUrl: $FEED_KRUSE_URL
+enabled: true
+handle: feedkruse
+hasUrls: true
+language: en-US
+name: 'Feed Kruse'
+primary: false
+siteGroup: 410b63a4-65f9-4258-b5fc-f235c2bfea61
+sortOrder: 7

@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 0c63b45b-1f9d-4eed-82a4-77d9d80fd599
+handle: productItemNumber
+instructions: ''
+name: 'Item number'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

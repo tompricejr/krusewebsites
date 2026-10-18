@@ -1,0 +1,9 @@
+format: jpg
+handle: profileImage
+height: 300
+interlace: none
+mode: crop
+name: 'Profile image'
+position: center-center
+quality: 82
+width: 300

@@ -1,0 +1,75 @@
+<footer>
+	<div class="container">
+		{% set newsletter = craft.entries.section("newsletter").one() %}
+		{% if newsletter.mailchimpAudienceId | length %}
+			<div class="newsletterBar" id="newsletter">
+				{% if newsletter.newsletterHeadingInFooter | length %}
+					<h3>{{ newsletter.newsletterHeadingInFooter }}</h3>
+				{% else %}
+					<h3>Subscribe to our newsletter</h3>
+				{% endif %}
+
+				<form class="parsleyForm" action="" method="post" data-parsley-validate>
+					{{ csrfInput() }}
+					{{ redirectInput('newsletter') }}
+					<input type="hidden" name="action" value="mailchimp-subscribe/audience/subscribe">
+					<input type="hidden" name="audienceId" value="{{ newsletter.mailchimpAudienceId }}">
+
+					<div class="form">
+						{% set subscribeResponse = mailchimpSubscribe is defined and mailchimpSubscribe.action == 'subscribe' ? mailchimpSubscribe : null %}
+
+						<div class="input">
+							<input
+								type="email"
+								name="email"
+								id="emailInput"
+								placeholder="Your email address"
+								{% if subscribeResponse and not subscribeResponse.success %}
+									value="{{ subscribeResponse.values.email ?? '' }}"
+								{% endif %}
+							required>
+						</div>
+						<button type="submit" class="button medium black">
+							<span>Subscribe</span>
+						</button>
+					</div>
+				</form>
+			</div>
+			<div class="sidelabel">
+				<a href="#newsletter" class="js-scrollTo">
+					<span>Stay up to date</span>
+					<svg class="icon-mail"><use xlink:href="/svg/icons.svg#icon-mail"></use></svg>
+				</a>
+			</div>
+		{% endif %}
+
+		<div class="middleBar">
+			{# Socials #}
+			{% include '03-components/_socials.twig' with {
+				'color': 'black'
+			} %}
+
+			{# Navigation #}
+			{% include '03-components/_navigation.twig' %}
+		</div>
+
+		<div class="bottomBar">
+			<span>©{{ "now"| date("Y") }} {{ siteName }}</span>
+
+			{% set footerLinks = navigation.footerLinks.all() %}
+			{% if footerLinks | length %}
+				{% for navItem in footerLinks %}
+					<a href="{{ navItem.page[0].url }}">
+						{% if navItem.customTitle | length %}
+							{{ navItem.customTitle }}
+						{% elseif navItem.page[0].titleShort  | length %}
+							{{ navItem.page[0].titleShort }}
+						{% else %}
+							{{ navItem.page[0].title }}
+						{% endif %}
+					</a>
+				{% endfor %}
+			{% endif %}
+		</div>
+	</div>
+</footer>

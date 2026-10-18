@@ -1,0 +1,33 @@
+fieldLayouts:
+  1dc84a76-b6a1-4bd8-ac21-a7eeaea4df37:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: 'Category title'
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: b9f2e6c2-688b-413d-998a-c9fc47b58735
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Color
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 68a493f2-7ebb-4bba-9eb6-0672afb1a3d9
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: c0419197-1930-4637-84e1-842f3e20188f
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: SEO
+        sortOrder: 2
+handle: productCategories
+hasTitleField: true
+name: 'Product categories'
+section: 7f85c3db-04ca-4a94-8e8f-758802f13562 # Product categories
+sortOrder: 1
+titleFormat: ''

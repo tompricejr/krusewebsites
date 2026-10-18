@@ -1,0 +1,33 @@
+contentColumnType: string
+fieldGroup: 38acb381-656b-46ca-803c-1b1a110207ca
+handle: mainNavigation
+instructions: ''
+name: 'Main navigation'
+searchable: true
+settings:
+  columns:
+    __assoc__:
+      -
+        - 4ea0e5f1-e66c-4158-a12a-7b92447f1095
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - d4a1d9f2-a201-4aa1-9f7f-ce09c09f4631
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_mainnavigation}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  propagationMethod: none
+  selectionLabel: 'Add navigation item'
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

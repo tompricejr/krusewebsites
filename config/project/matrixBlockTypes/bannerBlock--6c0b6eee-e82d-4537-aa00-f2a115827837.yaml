@@ -1,0 +1,35 @@
+field: 2139379e-ad7e-4fda-995e-69fbcf84ae8a
+fieldLayouts:
+  0f838382-f57e-479d-92ae-89da048112ac:
+    tabs:
+      -
+        fields:
+          4c075ea6-6c97-4627-87fd-d4a8a3337ef7:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  4c075ea6-6c97-4627-87fd-d4a8a3337ef7:
+    contentColumnType: string
+    fieldGroup: null
+    handle: selectedBanners
+    instructions: 'Select one banner for a page wide banner. Select multiple for smaller sized banners that can be swiped.'
+    name: 'Select banner(s)'
+    searchable: false
+    settings:
+      limit: ''
+      localizeRelations: '1'
+      selectionLabel: 'Select banners'
+      source: null
+      sources:
+        - 'section:f5e9cf9e-3c6a-4b31-9cd5-c0e5e3b9f7a2'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: bannerBlock
+name: Banner
+sortOrder: 6

@@ -1,0 +1,11 @@
+contentColumnType: string(7)
+fieldGroup: 33d27ffd-546a-4a4f-9768-4f7b049a6f0b
+handle: bannerColor
+instructions: 'This value will overwrite the color set by the related category. Useful when there are no categories but a color is needed.'
+name: 'Banner color'
+searchable: false
+settings:
+  defaultColor: ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Color

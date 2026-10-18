@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 584abf09-a9cc-4d87-8729-081ecdd8fda7
+handle: seoCustomTitle
+instructions: ''
+name: 'SEO custom title'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

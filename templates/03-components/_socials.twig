@@ -1,0 +1,29 @@
+{% if socialMediaChannels.socials | length %}
+	<nav class="socials">
+		{% if socialMediaChannels.socials.facebook | length %}
+			<a href="{{ socialMediaChannels.socials.facebook }}" class="socialIcon {{ color }}" target="_blank">
+				<svg class="icon-facebook"><use xlink:href="/svg/icons.svg#icon-facebook"></use></svg>
+			</a>
+		{% endif %}
+		{% if socialMediaChannels.socials.instagram | length %}
+			<a href="{{ socialMediaChannels.socials.instagram }}" class="socialIcon {{ color }}" target="_blank">
+				<svg class="icon-instagram"><use xlink:href="/svg/icons.svg#icon-instagram"></use></svg>
+			</a>
+		{% endif %}
+		{% if socialMediaChannels.socials.twitter | length %}
+			<a href="{{ socialMediaChannels.socials.twitter }}" class="socialIcon {{ color }}" target="_blank">
+				<svg class="icon-twitter"><use xlink:href="/svg/icons.svg#icon-twitter"></use></svg>
+			</a>
+		{% endif %}
+		{% if socialMediaChannels.socials.linkedin | length %}
+			<a href="{{ socialMediaChannels.socials.linkedin }}" class="socialIcon {{ color }}" target="_blank">
+				<svg class="icon-linkedin"><use xlink:href="/svg/icons.svg#icon-linkedin"></use></svg>
+			</a>
+		{% endif %}
+		{% if socialMediaChannels.socials.youtube | length %}
+			<a href="{{ socialMediaChannels.socials.youtube }}" class="socialIcon {{ color }}" target="_blank">
+				<svg class="icon-youtube"><use xlink:href="/svg/icons.svg#icon-youtube"></use></svg>
+			</a>
+		{% endif %}
+	</nav>
+{% endif %}

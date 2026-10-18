@@ -1,0 +1,17 @@
+contentColumnType: string
+fieldGroup: 3dec455d-985a-4e62-bdf5-7d7b7b6cb34b # Settings
+handle: googleTagManager
+instructions: ''
+name: 'Google Tag Manager'
+searchable: true
+settings:
+  contentTable: '{{%stc_googletagmanager}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

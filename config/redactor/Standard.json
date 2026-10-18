@@ -1,0 +1,25 @@
+{
+	"buttons": [
+		"redo",
+		"undo",
+		"formatting",
+		"bold",
+		"italic",
+		"ol",
+		"ul",
+		"line",
+		"link",
+		"file",
+		"html"
+	],
+	"plugins": [
+		"alignment"
+	],
+	"formatting": [
+		"p",
+		"h2",
+		"h3"
+	],
+	"toolbarFixed": true,
+	"linkNewTab": true
+}

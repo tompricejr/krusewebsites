@@ -1,0 +1,27 @@
+field: 2139379e-ad7e-4fda-995e-69fbcf84ae8a
+fieldLayouts:
+  97224e36-9cac-41c5-80b7-31091addf9d1:
+    tabs:
+      -
+        fields:
+          13a89135-49da-429a-9c46-96bcbfe27308:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  13a89135-49da-429a-9c46-96bcbfe27308:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: showStoreFinder
+    instructions: ''
+    name: 'Show Store Finder application'
+    searchable: false
+    settings:
+      default: '1'
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Lightswitch
+handle: storeFinderBlock
+name: 'Store Finder'
+sortOrder: 9

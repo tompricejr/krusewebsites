@@ -1,0 +1,219 @@
+{# Body color #}
+{# Set entry #}
+{% set lastSegment = craft.app.request.segments | last %}
+{% if entry is not defined %}
+	{# Try to find the entry by sites... #}
+	{% set entry = craft.entries.section("products").site('*').slug(lastSegment).one() %}
+{% endif %}
+
+{% set bodyColor = '' %}
+
+{% if entry is defined and entry is not null %}
+	{% if entry.productColor is defined %}
+		{% if entry.productColor | length %}
+			{% set bodyColor = 'style=color:'~entry.productColor %}
+		{% else %}
+			{% set bodyColor = 'style=color:'~entry.productSelectedCategory[0].categoryColor %}
+		{% endif %}
+	{% else %}
+		{% set bodyColor = '' %}
+	{% endif %}
+{% endif %}
+
+{% extends "01-settings/_layout" %}
+{% block content %}
+{# ================================== Content ============================================== #}
+
+{# Hero #}
+<div class="hero has-product">
+	<div class="container">
+		<div class="image">
+			<img src="{{ entry.productImage[0].getUrl('productLarge') }}" alt="{{ entry.title }}">
+		</div>
+		<div class="text">
+			{% if entry.productBestSeller | length %}
+				<div class="label">Best Seller</div>
+			{% endif %}
+			{% if entry.productLabel | length %}
+				<div class="label">{{ entry.productLabel}}</div>
+			{% endif %}
+			<div class="label empty">&nbsp;</div>
+
+			<h1>
+				<span class="largeTxt">{{ entry.title }}</span>
+			</h1>
+
+			{% if entry.productSelectedBrand[0] | length %}
+				<div class="brand">{{ entry.productSelectedBrand[0].title }}</div>
+			{% endif %}
+		</div>
+	</div>
+</div>
+
+{# Product buy floater #}
+{% if entry.productChewyLink | length %}
+	<div class="productBuyFloater">
+		<a href="{{ siteUrl }}store-finder" class="button medium black ghost">
+			<span class="onlyMini">Find retailer</span>
+			<span class="onlySmallMediumLarge">Find a local retailer</span>
+		</a>
+		<a href="{{ entry.productChewyLink }}" class="button has-icon medium pageColor" target="_blank">
+			<span class="onlySmallMediumLarge">Buy on</span>
+			<img src="/svg/chewy-logo.svg" alt="">
+			<svg class="icon-external"><use xlink:href="/svg/icons.svg#icon-external"></use></svg>
+		</a>
+	</div>
+{% endif %}
+
+{# Product highlights #}
+<div class="productHighlights container">
+	<div class="text">
+		<div class="meta">
+			{% if entry.productSelectedCategory | length %}
+				<div class="tag">{{ entry.productSelectedCategory[0].title }}</div>
+			{% endif %}
+
+			{% set tags = entry.productTags.all() %}
+			{% for tag in tags %}
+				<div class="tag">{{ tag.title }}</div>
+			{% endfor %}
+
+			{% if entry.productItemNumber | length %}
+				<div class="itemNumber">Item number {{ entry.productItemNumber }}</div>
+			{% endif %}
+		</div>
+
+		{% if entry.availableSizes | length %}
+			<div class="size">
+				<p>Available in</p>
+				<ul>
+					{% set sizes = entry.availableSizes %}
+					{% for size in sizes %}
+						<li><span>{{ size.value }}</span></li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endif %}
+
+		{% if entry.productShortDescription | length %}
+			<div class="description">
+				<p>
+					{{ entry.productShortDescription }}
+					{# <a href="#product-details" class="js-scrollTo">More product details</a> #}
+				</p>
+			</div>
+		{% endif %}
+
+		<div class="buttons">
+			{# <a href="{{ siteUrl }}store-finder" class="button medium black ghost">
+				<span>Find a local retailer</span>
+			</a> #}
+			{% if entry.productChewyLink | length %}
+				<a href="{{ entry.productChewyLink }}" class="button has-icon medium pageColor" target="_blank">
+					<span>Buy on</span>
+					<img src="/svg/chewy-logo.svg" alt="">
+					<svg class="icon-external"><use xlink:href="/svg/icons.svg#icon-external"></use></svg>
+				</a>
+			{% endif %}
+		</div>
+	</div>
+
+	{% if entry.productHighlights | length %}
+		<div class="productUSPs">
+			{% set highlights = entry.productHighlights.all() %}
+			{% for highlight in highlights %}
+				<div class="uspBlock">
+					<div class="icon">
+						<svg class="icon-check"><use xlink:href="/svg/icons.svg#icon-check"></use></svg>
+					</div>
+					<div class="value">
+						<h2>{{ highlight.highlightTitle }}</h2>
+						<p>{{ highlight.highlightDescription }}</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+</div>
+
+{# Product details #}
+{% if entry.productDetails | length %}
+	<div class="productInfoBlock container" id="product-details">
+		<div class="productInfo">
+			{% set infoItems = entry.productDetails.all() %}
+			{% for infoItem in infoItems %}
+				<div class="productInfoItem {{ loop.first ? 'is-active'}}">
+					<button class="header">
+						<div class="title">{{ infoItem.sectionTitle }}</div>
+						<div class="icon">
+							<svg class="icon-plus-big"><use xlink:href="/svg/icons.svg#icon-plus-big"></use></svg>
+						</div>
+					</button>
+					<div class="content">
+						<div class="contentContainer">
+							{% for block in infoItem.details.all()  %}
+
+								{# Text ----------------------------------------- #}
+								{% if block.type == "text" %}
+									{% if block.text | length %}
+										{{ block.text }}
+									{% endif %}
+
+								{# Table ----------------------------------------- #}
+								{% elseif block.type == "table" %}
+									{% if block.table | length %}
+										<table class="list">
+											{% for row in block.table %}
+												<tr>
+													<td>{{ row.index }}</td>
+													<td>{{ row.value1 }}</td>
+													<td>{{ row.value2 }}</td>
+												</tr>
+											{% endfor %}
+										</table>
+									{% endif %}
+
+								{# Images ----------------------------------------- #}
+								{% elseif block.type == "images" %}
+									{% if block.images | length %}
+										<div class="images">
+											{% set images = block.images.all() %}
+											{% for image in images %}
+												<img src="{{ image.getUrl('productLarge') }}" data-zoom="{{ image.getUrl('heroLarge') }}" class="has-zoom" alt="">
+											{% endfor %}
+										</div>
+									{% endif %}
+								{% endif %}
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endif %}
+
+{# Content blocks #}
+{% include '03-components/_content-blocks.twig' %}
+
+{# Related #}
+
+{# Product contact #}
+{% if entry.productDetails | length %}
+	<div class="productContact">
+		<div class="container">
+			<div class="image">
+				<img src="{{ entry.productImage[0].getUrl('productLarge') }}" alt="{{ entry.title }}">
+			</div>
+			<div class="text">
+				<div class="h3">Still have questions about this product?</div>
+				<a href="{{ siteUrl }}contact" class="button medium">
+					<span>Contact us</span>
+				</a>
+			</div>
+		</div>
+	</div>
+{% endif %}
+
+{# =============================== /END Content ============================================ #}
+{% endblock %}

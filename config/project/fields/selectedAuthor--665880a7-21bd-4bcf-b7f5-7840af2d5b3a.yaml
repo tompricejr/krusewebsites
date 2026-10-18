@@ -1,0 +1,19 @@
+contentColumnType: string
+fieldGroup: aea9ff67-5a44-4acb-a47f-c3642ff7ca36
+handle: selectedAuthor
+instructions: ''
+name: Author
+searchable: false
+settings:
+  limit: '1'
+  localizeRelations: '1'
+  selectionLabel: 'Select author'
+  source: null
+  sources:
+    - 'section:675bb285-7ddd-476e-956b-ff49bc9ea992'
+  targetSiteId: null
+  validateRelatedElements: ''
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

@@ -1,0 +1,21 @@
+<header>
+	<div class="wrapper">
+		<a href="{{ siteUrl }}" class="brand">
+			<img src="{{ settings.brandLogoWhite[0].url }}">
+		</a>
+
+		{# Navigation #}
+		{% include '03-components/_navigation.twig' %}
+
+		<button class="menuButton js-toggleNav">
+			<div class="text">
+				<div class="open">Menu</div>
+				<div class="close">Close</div>
+			</div>
+			<div class="icon">
+				<div class="line"></div>
+				<div class="line"></div>
+			</div>
+		</button>
+	</div>
+</header>

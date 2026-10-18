@@ -1,0 +1,65 @@
+fieldLayouts:
+  c978e31e-3739-4f39-8b50-32476b0f2d62:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: b2591d8f-ee51-4d22-b55a-2323ca76a2e3
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 8b506f1e-d108-4209-8c12-9b4fe891edb0
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 33cb797e-9085-4ee2-bdcf-3f8062c43fc0
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 2a5bdcd2-5955-4adf-a185-e4b1f45c13db
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 9a762c8d-1f15-4e11-9276-076ed90ce167
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: f514c17e-c7a2-48cd-b6a3-34ea00c53f6d
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 665880a7-21bd-4bcf-b7f5-7840af2d5b3a
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Header
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 2139379e-ad7e-4fda-995e-69fbcf84ae8a
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 68a493f2-7ebb-4bba-9eb6-0672afb1a3d9
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: c0419197-1930-4637-84e1-842f3e20188f
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: SEO
+        sortOrder: 3
+handle: article
+hasTitleField: false
+name: Article
+section: 65d2a4b8-81dc-4d63-bfbc-a2b2e1ecdb55
+sortOrder: 1
+titleFormat: '{titleLong}'

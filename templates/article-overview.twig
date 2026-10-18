@@ -1,0 +1,45 @@
+{# Body color #}
+{% set bodyColor = "" %}
+
+{% extends "01-settings/_layout" %}
+{% block content %}
+{# ================================== Content ============================================== #}
+
+{% paginate craft.entries.section("articles").limit(12) as pagination, articles %}
+{% do seomatic.helper.paginate(pagination) %}
+
+{# Hero #}
+{% include '03-components/_hero.twig' with {
+	'titleShort': entry.titleShort,
+	'titleLong': entry.titleLong
+} %}
+
+{# Article cards #}
+<div class="articleListBlock container">
+	{% for article in articles %}
+		{% if article.imageVideo[0].extension == "json" %}
+			{% set image = "" %}
+		{% else %}
+			{% set image = article.imageVideo[0] %}
+		{% endif %}
+		{% include '03-components/_banner.twig' with {
+			'title': article.titleLong,
+			'label': article.titleShort,
+			'image': image,
+			'url': article.url,
+			'buttonColor': "black",
+			'buttonText': "View article"
+		} %}
+	{% else %}
+		<div style="text-align: center; width: 100%;">No articles found.</div>
+	{% endfor %}
+</div>
+
+{# Pagination #}
+{% include '03-components/_pagination.twig' %}
+
+{# Content blocks #}
+{% include '03-components/_content-blocks.twig' %}
+
+{# =============================== /END Content ============================================ #}
+{% endblock %}

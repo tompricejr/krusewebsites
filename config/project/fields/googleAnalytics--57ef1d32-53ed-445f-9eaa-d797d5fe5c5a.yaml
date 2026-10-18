@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 3dec455d-985a-4e62-bdf5-7d7b7b6cb34b # Settings
+handle: googleAnalytics
+instructions: 'Copy paste the trackingcode that goes into the <head> section'
+name: 'Google Analytics'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: '1'
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

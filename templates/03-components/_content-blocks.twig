@@ -1,0 +1,225 @@
+{# Content blocks #}
+{% if entry.contentBlocks | length %}
+	{% for block in entry.contentBlocks.all()  %}
+
+		{# Intro ----------------------------------------- #}
+		{% if block.type == "introBlock" %}
+			{% if block.text | length %}
+				<div class="introBlock container">
+					{{ block.text }}
+				</div>
+			{% endif %}
+
+		{# Text ----------------------------------------- #}
+		{% elseif block.type == "textBlock" %}
+			{% if block.text | length %}
+				<div class="textBlock container">
+					{{ block.text }}
+				</div>
+			{% endif %}
+
+		{# Image ----------------------------------------- #}
+		{% elseif block.type == "imageBlock" %}
+			{% if block.selectedImage | length %}
+				<div class="imageBlock container">
+					{% set image = block.selectedImage.one() %}
+					{% if image.extension == "svg" %}
+						<img src="{{ image.url }}" alt="{{block.imageCaption}}">
+					{% else %}
+						<img src="{{ image.getUrl('heroLarge') }}" sizes="100vw" srcset="
+							{{ image.getUrl('heroSmall') }} {{ image.getWidth('heroSmall') }}w,
+							{{ image.getUrl('heroMedium') }} {{ image.getWidth('heroMedium') }}w,
+							{{ image.getUrl('heroLarge') }} {{ image.getWidth('heroLarge') }}w"
+						alt="{{block.imageCaption}}">
+					{% endif %}
+
+					{% if block.imageCaption %}
+						<div class="caption">{{ block.imageCaption }}</div>
+					{% endif %}
+				</div>
+			{% endif %}
+
+		{# Side by Side ----------------------------------------- #}
+		{% elseif block.type == "sideBySideBlock" %}
+			{% if block.leftSide | length and block.rightSide | length %}
+				<div class="sideBySideBlock container">
+					{# Left side #}
+					{% if block.leftSide.image | length %}
+						<div class="imageBlock {{ block.leftSide.alignToTop ? 'is-alignedTop'}}">
+							{% set image = block.leftSide.image.one() %}
+							<img src="{{ image.getUrl('heroSmall') }}" alt="{{ block.leftSide.imageCaption }}">
+							{% if block.leftSide.imageCaption %}
+								<div class="caption">{{ block.leftSide.imageCaption }}</div>
+							{% endif %}
+						</div>
+					{% else %}
+						<div class="textBlock {{ block.leftSide.alignToTop ? 'is-alignedTop'}}">
+							{{ block.leftSide.text }}
+
+							{% if block.leftSide.linkField.text | length %}
+								{% include '03-components/_button.twig' with {
+									'url': block.leftSide.linkField.getUrl(),
+									'target': block.leftSide.linkField.getTarget(),
+									'text': block.leftSide.linkField.text,
+									'color': block.leftSide.color,
+									'size': 'medium'
+								} %}
+							{% endif %}
+						</div>
+					{% endif %}
+
+					{# Right side #}
+					{% if block.rightSide.image | length %}
+						<div class="imageBlock {{ block.rightSide.alignToTop ? 'is-alignedTop'}}">
+							{% set image = block.rightSide.image.one() %}
+							<img src="{{ image.getUrl('heroSmall') }}" alt="{{ block.rightSide.imageCaption }}">
+							{% if block.rightSide.imageCaption %}
+								<div class="caption">{{ block.rightSide.imageCaption }}</div>
+							{% endif %}
+						</div>
+					{% else %}
+						<div class="textBlock {{ block.leftSide.alignToTop ? 'is-alignedTop'}}">
+							{{ block.rightSide.text }}
+							{% if block.rightSide.linkField.text | length %}
+								{% include '03-components/_button.twig' with {
+									'url': block.rightSide.linkField.getUrl(),
+									'target': block.rightSide.linkField.getTarget(),
+									'text': block.rightSide.linkField.text,
+									'color': block.rightSide.color,
+									'size': 'medium'
+								} %}
+							{% endif %}
+						</div>
+					{% endif %}
+				</div>
+			{% endif %}
+
+		{# Video ----------------------------------------- #}
+		{% elseif block.type == "videoBlock" %}
+			{% if block.selectedVideo | length %}
+				<div class="videoBlock container">
+					{% set video = craft.embeddedAssets.get(block.selectedVideo.one()) %}
+					{% if video.providerName == "YouTube" or video.providerName == "Vimeo" %}
+						<div class="plyrVideo" data-plyr-provider="{{video.providerName | lower }}" data-plyr-embed-id="{{video.url}}"></div>
+					{% endif %}
+				</div>
+			{% endif %}
+
+		{# Button ----------------------------------------- #}
+		{% elseif block.type == "buttonBlock" %}
+			{% if block.buttons | length %}
+				<div class="textBlock container">
+					{% set buttons = block.buttons.all() %}
+					{% for button in buttons %}
+						{% include '03-components/_button.twig' with {
+							'url': button.linkField.getUrl(),
+							'target': button.linkField.getTarget(),
+							'text': button.linkField.text,
+							'color': button.color,
+							'size': 'medium'
+						} %}
+					{% endfor %}
+				</div>
+			{% endif %}
+
+		{# Products ----------------------------------------- #}
+		{% elseif block.type == "productsBlock" %}
+			{% if block.selectedProducts | length %}
+				{% if block.heading | length %}
+					<div class="h2 container is-textCenter color-black">{{ block.heading }}</div>
+				{% endif %}
+
+				<div class="productsListBlock container">
+					{% set products = block.selectedProducts.all() %}
+					{% for product in products %}
+						{% if product.productColor | length %}
+							{% set color = 'style=color:'~product.productColor %}
+						{% else %}
+							{% set color = 'style=color:'~product.productSelectedCategory[0].categoryColor %}
+						{% endif %}
+						{% include '03-components/_productcard.twig' with {
+							'title': product.title,
+							'brand': product.productSelectedBrand[0].title,
+							'image': product.productImage[0],
+							'url': product.url,
+							'availableSizes': product.availableSizes,
+							'color': color,
+							'isBestSeller': product.productBestSeller
+						} %}
+					{% endfor %}
+				</div>
+			{% endif %}
+
+		{# Banners ----------------------------------------- #}
+		{% elseif block.type == "bannerBlock" %}
+			{# 1 banner #}
+			{% if block.selectedBanners | length == 1 %}
+			{% set banner = block.selectedBanners.one() %}
+				{% if banner.bannerColor | length %}
+					{% set buttonColor = banner.bannerColor %}
+				{% elseif banner.bannerSelectedCategory | length %}
+					{% set buttonColor = banner.bannerSelectedCategory[0].categoryColor %}
+				{% else %}
+					{% set buttonColor = null %}
+				{% endif %}
+				<div class="bannerBlock container">
+					{% include '03-components/_banner.twig' with {
+						'title': banner.title,
+						'label': banner.bannerLabel,
+						'image': banner.bannerImage[0],
+						'url': banner.bannerLink.getUrl(),
+						'buttonColor': buttonColor,
+						'buttonText': banner.bannerLink.text
+					} %}
+				</div>
+
+			{# Multiple banners #}
+			{% elseif block.selectedBanners | length > 1 %}
+			{% set banners = block.selectedBanners.all() %}
+				<div class="bannerBlock">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							{% for banner in banners %}
+							{% if banner.bannerColor | length %}
+								{% set buttonColor = banner.bannerColor %}
+							{% elseif banner.bannerSelectedCategory | length %}
+								{% set buttonColor = banner.bannerSelectedCategory[0].categoryColor %}
+							{% else %}
+								{% set buttonColor = null %}
+							{% endif %}
+							<div class="swiper-slide">
+								{% include '03-components/_banner.twig' with {
+									'title': banner.title,
+									'label': banner.bannerLabel,
+									'image': banner.bannerImage[0],
+									'url': banner.bannerLink.getUrl(),
+									'buttonColor': buttonColor,
+									'buttonText': banner.bannerLink.text
+								} %}
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+					<div class="container">
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			{% endif %}
+
+		{# Store Finder ----------------------------------------- #}
+		{% elseif block.type == "storeFinderBlock" %}
+			{% if block.showStoreFinder | length %}
+				<div class="container">
+					<div id='storemapper' style='width:100%;'>
+						<p>Store Locator is loading from <a href='https://www.storemapper.co'>Storemapper store locator app</a>...</p>
+					</div>
+					<script data-storemapper-start='2020,05,03' data-storemapper-id='7413'>
+						(function() {var script = document.createElement('script');script.type  = 'text/javascript';script.async = true;script.src = 'https://www.storemapper.co/js/widget.js'; var entry = document.getElementsByTagName('script')[0];entry.parentNode.insertBefore(script, entry);}());
+					</script>
+				</div>
+			{% endif %}
+
+
+		{% endif %}
+	{% endfor %}
+{% endif %}

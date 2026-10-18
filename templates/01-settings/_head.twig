@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html itemscope itemtype="https://schema.org/WebPage" lang="{{ craft.app.language }}">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	{% if 'krusewebsitemanager' in craft.app.request.absoluteUrl %}
+		{# Do not index staging #}
+		<meta name="robots" content="noindex">
+	{% else %}
+		{# Google Analytics #}
+		{% if settings.googleAnalytics | length and craft.cookieConsent.getConsent(craft.app.sites.currentSite.handle|lower ~ '-statistics') %}
+			{{ settings.googleAnalytics | raw }}
+		{% endif %}
+
+		{# Google Tag Manager #}
+		{% if settings.googleTagManager.codeForInHead | length and craft.cookieConsent.getConsent(craft.app.sites.currentSite.handle|lower ~ '-statistics') %}
+			{{ settings.googleTagManager.codeForInHead | raw }}
+		{% endif %}
+	{% endif %}
+
+	{# Favicon #}
+	{% if settings.favicon | length %}
+		<link rel="icon" type="image/png" href="{{ settings.favicon[0].getUrl('favicon') }}">
+	{% endif %}
+
+	{# Fonts #}
+	<!-- Google Fonts removed; now self-hosted in general.css -->
+
+	<style>
+		:root {
+			--gray: {{ settings.defaultColors.gray }};
+			--black: {{ settings.defaultColors.black }};
+			--brandcolor: {{ settings.defaultColors.brandColor }};
+			--color-00: var(--brandcolor);
+		}
+	</style>
+
+	{# Stylesheets #}
+	{% if environment == 'production' %}
+		<link href="/css/general.css?v=10" rel="stylesheet">
+	{% else %}
+		<link href="/css/general.css?v={{ "now"| date("u") }}" rel="stylesheet">
+	{% endif %}
+	<link href="/css/cookie-consent.css?v=10" rel="stylesheet">
+
+	{# Custom CSS #}
+	<style>
+		{{ settings.customCSS | raw }}
+	</style>
+</head>

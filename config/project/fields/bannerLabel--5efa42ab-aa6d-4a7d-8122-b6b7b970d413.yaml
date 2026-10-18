@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 33d27ffd-546a-4a4f-9768-4f7b049a6f0b
+handle: bannerLabel
+instructions: ''
+name: Label
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

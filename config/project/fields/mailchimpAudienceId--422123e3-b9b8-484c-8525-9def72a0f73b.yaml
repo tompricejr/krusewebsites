@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 3dec455d-985a-4e62-bdf5-7d7b7b6cb34b # Settings
+handle: mailchimpAudienceId
+instructions: 'Create an Audience in Mailchimp and copy the ID here. Mailchimp.com > Audience > Settings > Audience name and defaults. Leave blank if to hide the newsletter subscribe bar in the footer.'
+name: 'Mailchimp audience ID'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: '1'
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

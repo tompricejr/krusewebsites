@@ -1,0 +1,8 @@
+baseUrl: $KRUSEWEBSITEMANAGER_URL
+handle: kruseWebsiteManager
+hasUrls: true
+language: en-US
+name: 'Kruse Website Manager'
+primary: true
+siteGroup: 410b63a4-65f9-4258-b5fc-f235c2bfea61
+sortOrder: 4

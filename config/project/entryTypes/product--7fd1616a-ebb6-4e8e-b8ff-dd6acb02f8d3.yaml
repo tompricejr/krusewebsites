@@ -1,0 +1,93 @@
+fieldLayouts:
+  3b804f8d-3caa-4e48-a692-d75492b4d6e0:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: 'Product title'
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 9a8a5ed4-9d9a-4d1e-aa02-3d82c4736fe1
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 259f079d-a5aa-4230-b6d4-1eb9def7c388
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 611a35cd-77a9-4831-a694-1f79b9532bb1
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: c4915d42-9171-4c0d-8a7a-9a698fd8183c # Category
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: f9716a3b-140d-4d13-96c6-445dc9c7fa44
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: bf637bdc-6252-44f6-b43f-dcdcdf85b3b2
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 2e390263-563a-427d-adb9-9cf09afcefdf
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 4b7d0025-1aa7-4b36-b8e6-7cf433870a7a
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 540166a3-b04b-41b4-995c-67d221e3e13f
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: f514c17e-c7a2-48cd-b6a3-34ea00c53f6d
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 1661311c-85c9-4573-94b0-1122878d3c0e # Available sizes
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: dbe4dfa9-e664-4665-a223-b7f7f0110f99
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Specs
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: e67a3187-586c-47be-825d-3505fd69f5a2
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 320bc333-4662-4a3a-ad66-174cb16e022f
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 2139379e-ad7e-4fda-995e-69fbcf84ae8a
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Details
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 68a493f2-7ebb-4bba-9eb6-0672afb1a3d9
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: c0419197-1930-4637-84e1-842f3e20188f
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: SEO
+        sortOrder: 3
+handle: product
+hasTitleField: true
+name: Product
+section: 951e7ceb-9370-4663-8d2c-461d6b845243
+sortOrder: 1
+titleFormat: ''

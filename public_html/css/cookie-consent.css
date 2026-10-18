@@ -1,0 +1,77 @@
+/* Kruse consent banner — full-width bottom bar, brand-matched */
+#elc-cookie-consent {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 9999;
+  background: #ffffff; border-top: 3px solid var(--brandcolor, #1a6b3c);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.12);
+  font-family: 'Open Sans', sans-serif; color: #4a5764;
+  padding: 20px 28px;
+}
+#elc-cookie-consent.elc-hidden { display: none; }
+#elc-cookie-consent-form { max-width: 1200px; margin: 0 auto; }
+#elc-cookie-consent .elc-primary-heading {
+  font-family: 'Montserrat', sans-serif; font-weight: 800;
+  color: var(--brandcolor, #1a6b3c); font-size: 18px; margin: 0 0 6px;
+}
+#elc-cookie-consent .elc-header-description { margin: 0 0 14px; font-size: 14px; line-height: 1.5; max-width: 820px; }
+#elc-cookie-consent .elc-cookie-group { display: inline-block; vertical-align: top; margin: 0 28px 10px 0; }
+#elc-cookie-consent .elc-cookie-headline { display: flex; align-items: center; gap: 8px; }
+#elc-cookie-consent .elc-cookie-checkbox { width: 16px; height: 16px; accent-color: var(--brandcolor, #1a6b3c); margin: 0; }
+#elc-cookie-consent .elc-cookie-name { font-size: 14px; font-weight: 600; cursor: pointer; }
+#elc-cookie-consent .elc-cookie-description { display: none; }
+#elc-cookie-consent .button-container { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+#elc-cookie-consent .elc-text-link { color: #4a5764; text-decoration: underline; font-size: 13px; margin-right: auto; cursor: pointer; }
+#elc-cookie-consent button {
+  font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 13px;
+  padding: 10px 20px; border-radius: 6px; cursor: pointer; border: 2px solid var(--brandcolor, #1a6b3c);
+}
+#elc-cookie-consent .elc-button-link { background: var(--brandcolor, #1a6b3c); color: #fff; }
+#elc-cookie-consent .elc-secondary-button-link { background: #fff; color: var(--brandcolor, #1a6b3c); }
+#elc-cookie-tab { position: fixed; bottom: 16px; left: 16px; z-index: 9998; }
+#elc-cookie-tab a { background: var(--brandcolor, #1a6b3c); color: #fff; padding: 8px 14px; border-radius: 6px; font-family: 'Montserrat', sans-serif; font-size: 12px; text-decoration: none; }
+#elc-cookie-tab.elc-hidden { display: none; }
+@media (max-width: 640px) {
+  #elc-cookie-consent .elc-cookie-group { display: block; margin-right: 0; }
+  #elc-cookie-consent .button-container { flex-direction: column; align-items: stretch; }
+  #elc-cookie-consent .elc-text-link { margin: 0 0 8px; }
+}
+
+/* Collapse detail rows when banner is in small/collapsed state */
+#elc-cookie-consent.elc-small .elc-cookie-description,
+#elc-cookie-consent.elc-small .elc-cookie {
+  display: none !important;
+}
+#elc-cookie-consent.elc-small .elc-cookie-group {
+  display: inline-block; vertical-align: top; margin: 0 24px 8px 0;
+}
+
+/* Force-hide cookie detail rows always */
+#elc-cookie-consent .elc-cookie-description,
+#elc-cookie-consent .elc-cookie,
+#elc-cookie-consent .elc-cookie-field { display: none !important; }
+#elc-cookie-consent { max-height: 40vh; overflow-y: auto; }
+
+/* Polish pass */
+/* 1. Hide the redundant second Save button (plugin renders #elc-accept-link as a duplicate) */
+#elc-cookie-consent #elc-accept-link { display: none !important; }
+/* 2. Hide the "Hide Details" link by default (only show Details initially) */
+#elc-cookie-consent #elc-hide-detail-link { display: none !important; }
+/* 3. Space the category row below the header so they don't overlap */
+#elc-cookie-consent #elc-cookie-consent-settings { margin-top: 14px; }
+#elc-cookie-consent .elc-header { margin-bottom: 6px; }
+
+/* Top spacing fix — separate header from categories cleanly */
+#elc-cookie-consent { padding-top: 24px; }
+#elc-cookie-consent .elc-header { margin-bottom: 16px; overflow: hidden; }
+#elc-cookie-consent .elc-header-description { margin-bottom: 0; }
+#elc-cookie-consent #elc-cookie-consent-settings { margin-top: 0; clear: both; }
+#elc-cookie-consent .elc-cookie-group { margin-bottom: 4px; }
+
+/* Force clean vertical flow — kill any float/absolute overlap */
+#elc-cookie-consent-form { display: block !important; position: static !important; }
+#elc-cookie-consent .elc-header { position: static !important; float: none !important; display: block !important; margin-bottom: 20px !important; }
+#elc-cookie-consent #elc-cookie-consent-settings { position: static !important; float: none !important; display: block !important; margin: 0 0 16px !important; }
+#elc-cookie-consent .elc-cookie-group { position: static !important; float: none !important; }
+
+/* Remove Details link — categories are visible on the banner; full info lives in the privacy policy */
+#elc-cookie-consent #elc-detail-link,
+#elc-cookie-consent #elc-hide-detail-link { display: none !important; }

@@ -1,0 +1,48 @@
+field: 320bc333-4662-4a3a-ad66-174cb16e022f
+fieldLayouts:
+  d8cf314a-91e4-43e9-a1e5-aebf5329dfd2:
+    tabs:
+      -
+        fields:
+          68898887-55b0-4d1e-acec-98f7c0aadc81:
+            required: true
+            sortOrder: 2
+          f3c0674d-e541-468a-ad25-6f3d53774951:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  68898887-55b0-4d1e-acec-98f7c0aadc81:
+    contentColumnType: string
+    fieldGroup: null
+    handle: details
+    instructions: ''
+    name: Details
+    searchable: true
+    settings:
+      contentTable: '{{%matrixcontent_details}}'
+      maxBlocks: ''
+      minBlocks: ''
+      propagationMethod: none
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
+  f3c0674d-e541-468a-ad25-6f3d53774951:
+    contentColumnType: text
+    fieldGroup: null
+    handle: sectionTitle
+    instructions: ''
+    name: 'Section title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText

@@ -1,0 +1,17 @@
+contentColumnType: string
+fieldGroup: 38acb381-656b-46ca-803c-1b1a110207ca
+handle: footerLinks
+instructions: ''
+name: 'Footer links'
+searchable: true
+settings:
+  contentTable: '{{%stc_footerlinks}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  propagationMethod: none
+  selectionLabel: 'Add footer link'
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

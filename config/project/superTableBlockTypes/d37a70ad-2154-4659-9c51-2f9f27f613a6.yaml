@@ -1,0 +1,54 @@
+field: 75cc93af-f7b1-47d0-a4ff-60c06f5fb3ff
+fieldLayouts:
+  4db9426c-6de8-4b97-9ee3-f65d38d1db7c:
+    tabs:
+      -
+        fields:
+          ceef8abf-73a7-4c50-81ae-b85f5154a4dd:
+            required: true
+            sortOrder: 3
+          d565737b-1539-4a59-84b4-3e2abfb427e9:
+            required: true
+            sortOrder: 1
+          da2ed7d8-d35a-47e7-9f1d-dc3257db5085:
+            required: true
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  ceef8abf-73a7-4c50-81ae-b85f5154a4dd:
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: gray
+    instructions: ''
+    name: Gray
+    searchable: false
+    settings:
+      defaultColor: '#f5f5f5'
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Color
+  d565737b-1539-4a59-84b4-3e2abfb427e9:
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: brandColor
+    instructions: ''
+    name: 'Brand color'
+    searchable: false
+    settings:
+      defaultColor: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Color
+  da2ed7d8-d35a-47e7-9f1d-dc3257db5085:
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: black
+    instructions: ''
+    name: Black
+    searchable: false
+    settings:
+      defaultColor: '#000000'
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Color

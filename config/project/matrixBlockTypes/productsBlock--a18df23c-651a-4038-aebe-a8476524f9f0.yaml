@@ -1,0 +1,56 @@
+field: 2139379e-ad7e-4fda-995e-69fbcf84ae8a
+fieldLayouts:
+  7be55d12-d4fd-461f-bce7-c7cd13981b61:
+    tabs:
+      -
+        fields:
+          7f5b46aa-b13d-4530-b925-c3f277c1bf6b:
+            required: false
+            sortOrder: 1
+          b68d7443-ecbf-4739-b6e5-0eee06cf87bf:
+            required: true
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  7f5b46aa-b13d-4530-b925-c3f277c1bf6b:
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: 'For example ''Related products'' or ''Poultry products'''
+    name: 'Heading above products'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  b68d7443-ecbf-4739-b6e5-0eee06cf87bf:
+    contentColumnType: string
+    fieldGroup: null
+    handle: selectedProducts
+    instructions: 'Try to keep the list short. 3 or 6 works best. Maximum of 9.'
+    name: 'Select products'
+    searchable: false
+    settings:
+      limit: '9'
+      localizeRelations: '1'
+      selectionLabel: 'Select products'
+      source: null
+      sources:
+        - 'section:951e7ceb-9370-4663-8d2c-461d6b845243'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: productsBlock
+name: Products
+sortOrder: 8

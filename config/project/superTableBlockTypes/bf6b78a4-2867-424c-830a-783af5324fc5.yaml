@@ -1,0 +1,368 @@
+field: f37dea28-b415-4f49-bda1-b01c31786be1
+fieldLayouts:
+  616db3d8-38a9-4d40-b41e-2fc4ea4fe394:
+    tabs:
+      -
+        fields:
+          5bf86d71-3a45-423d-88b3-6013efaebcb4:
+            required: false
+            sortOrder: 1
+          8e5ca054-a767-44af-9eea-b1c242257927:
+            required: false
+            sortOrder: 3
+          31a52bef-0d1f-4ef2-a4d8-63c409590b25:
+            required: false
+            sortOrder: 5
+          b5be32a3-083a-4c43-a78c-285a9b176a3d:
+            required: false
+            sortOrder: 4
+          c580d165-1b18-4fe2-a25f-9eca94e5b2e5:
+            required: false
+            sortOrder: 6
+          edfbbc60-8a7f-4bc3-942a-3bf9af8dcde3:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  5bf86d71-3a45-423d-88b3-6013efaebcb4:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: alignToTop
+    instructions: ''
+    name: 'Align to top'
+    searchable: true
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Lightswitch
+  8e5ca054-a767-44af-9eea-b1c242257927:
+    contentColumnType: text
+    fieldGroup: null
+    handle: linkField
+    instructions: ''
+    name: Button
+    searchable: false
+    settings:
+      allowCustomText: '1'
+      allowTarget: '1'
+      allowedLinkNames:
+        1: asset
+        2: category
+        3: entry
+        7: email
+        8: tel
+        9: url
+      autoNoReferrer: ''
+      defaultLinkName: entry
+      defaultText: ''
+      enableAriaLabel: ''
+      enableTitle: ''
+      typeSettings:
+        __assoc__:
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+                -
+                  - allowCustomQuery
+                  - ''
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+                -
+                  - allowCustomQuery
+                  - ''
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+                -
+                  - allowCustomQuery
+                  - ''
+          -
+            - site
+            -
+              __assoc__:
+                -
+                  - sites
+                  - '*'
+          -
+            - user
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+                -
+                  - allowCustomQuery
+                  - ''
+          -
+            - custom
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+                -
+                  - allowAliases
+                  - ''
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+                -
+                  - allowAliases
+                  - ''
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+                -
+                  - allowAliases
+                  - ''
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+                -
+                  - allowAliases
+                  - ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: typedlinkfield\fields\LinkField
+  31a52bef-0d1f-4ef2-a4d8-63c409590b25:
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: ''
+    name: Image
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:adb77d58-066b-4ab9-b058-d5d7d19c3b34'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: '1'
+      restrictFiles: '1'
+      selectionLabel: 'Select image'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:adb77d58-066b-4ab9-b058-d5d7d19c3b34'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  b5be32a3-083a-4c43-a78c-285a9b176a3d:
+    contentColumnType: string
+    fieldGroup: null
+    handle: color
+    instructions: ''
+    name: 'Button color'
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Black
+            -
+              - value
+              - black
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - White
+            -
+              - value
+              - white
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Brand color'
+            -
+              - value
+              - color-00
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Color 01'
+            -
+              - value
+              - color-01
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Color 02'
+            -
+              - value
+              - color-02
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Color 03'
+            -
+              - value
+              - color-03
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Color 04'
+            -
+              - value
+              - color-04
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Color 05'
+            -
+              - value
+              - color-05
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Color 06'
+            -
+              - value
+              - color-06
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Color 07'
+            -
+              - value
+              - color-07
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Color 08'
+            -
+              - value
+              - color-08
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Color 09'
+            -
+              - value
+              - color-09
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Dropdown
+  c580d165-1b18-4fe2-a25f-9eca94e5b2e5:
+    contentColumnType: text
+    fieldGroup: null
+    handle: imageCaption
+    instructions: ''
+    name: 'Image caption'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '2'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  edfbbc60-8a7f-4bc3-942a-3bf9af8dcde3:
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: ''
+    name: Text
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field

@@ -1,0 +1,27 @@
+{% set navigation = navigation.mainNavigation.all() %}
+{% if navigation | length %}
+	<nav class="mainNav">
+		<ul>
+			{% for navItem in navigation %}
+				{% set activeClass = "" %}
+				{% if entry.slug == navItem.page[0].slug or currentMainSection in navItem.page[0].uri %}
+					{% set activeClass = "is-active" %}
+				{% endif %}
+
+				<li>
+					<a href="{{ navItem.page[0].url }}" class="{{ activeClass }}">
+						<span>
+							{% if navItem.customTitle | length %}
+								{{ navItem.customTitle }}
+							{% elseif navItem.page[0].titleShort  | length %}
+								{{ navItem.page[0].titleShort }}
+							{% else %}
+								{{ navItem.page[0].title }}
+							{% endif %}
+						</span>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</nav>
+{% endif %}

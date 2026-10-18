@@ -1,0 +1,23 @@
+enableVersioning: true
+handle: kruseWebsiteManagerPlaceholder
+name: 'Kruse Website Manager placeholder'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  fd48f99a-b40f-4255-af81-211ccdabeb64:
+    enabledByDefault: true
+    hasUrls: true
+    template: krusewebsitemanager
+    uriFormat: __home__
+type: single

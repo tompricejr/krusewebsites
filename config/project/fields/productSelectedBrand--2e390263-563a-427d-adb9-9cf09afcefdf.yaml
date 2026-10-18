@@ -1,0 +1,19 @@
+contentColumnType: string
+fieldGroup: 0c63b45b-1f9d-4eed-82a4-77d9d80fd599
+handle: productSelectedBrand
+instructions: ''
+name: Brand
+searchable: true
+settings:
+  limit: '1'
+  localizeRelations: '1'
+  selectionLabel: 'Select brand'
+  source: null
+  sources:
+    - 'section:7e253e4a-2755-4ca0-9ca0-85c3c240d2cb'
+  targetSiteId: null
+  validateRelatedElements: ''
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

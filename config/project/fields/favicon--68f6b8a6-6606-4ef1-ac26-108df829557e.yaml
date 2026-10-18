@@ -1,0 +1,28 @@
+contentColumnType: string
+fieldGroup: 3dec455d-985a-4e62-bdf5-7d7b7b6cb34b # Settings
+handle: favicon
+instructions: 'Recommended PNG 64px x 64px'
+name: Favicon
+searchable: false
+settings:
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:adb77d58-066b-4ab9-b058-d5d7d19c3b34'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: '1'
+  restrictFiles: '1'
+  selectionLabel: 'Select favicon'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:adb77d58-066b-4ab9-b058-d5d7d19c3b34'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: ''
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

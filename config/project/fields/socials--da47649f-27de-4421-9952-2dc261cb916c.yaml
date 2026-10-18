@@ -1,0 +1,17 @@
+contentColumnType: string
+fieldGroup: c779a644-a745-4d9d-bc90-aad93a4a6b9c
+handle: socials
+instructions: ''
+name: 'Social media channels'
+searchable: false
+settings:
+  contentTable: '{{%stc_socials}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  propagationMethod: none
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

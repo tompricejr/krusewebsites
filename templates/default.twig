@@ -1,0 +1,87 @@
+{# Body color #}
+{% if entry.articleSelectedCategory | length %}
+	{% set bodyColor = 'style=color:'~entry.articleSelectedCategory[0].categoryColor %}
+{% elseif entry.articleColor | length  %}
+	{% set bodyColor = 'style=color:'~entry.articleColor %}
+{% else %}
+	{% set bodyColor = '' %}
+{% endif %}
+
+{% extends "01-settings/_layout" %}
+{% block content %}
+{# ================================== Content ============================================== #}
+
+{# Hero #}
+{% include '03-components/_hero.twig' with {
+	'titleShort': entry.titleShort,
+	'titleLong': entry.titleLong
+} %}
+
+{# Author top #}
+{% if entry.section.handle == "articles" %}
+	<div class="pageInfoBlock container">
+		{% if entry.productTags | length %}
+			<div class="tags">
+				{% set tags = entry.productTags.all() %}
+				{% for tag in tags %}
+					<div class="tag">{{ tag.title }}</div>
+				{% endfor %}
+			</div>
+		{% endif %}
+
+		{% if entry.selectedAuthor | length  %}
+		{% set author = entry.selectedAuthor.one() %}
+			<div class="info">
+				<div class="infoDetails">
+					{% set image = author.profileImage[0] %}
+					{% if image | length %}
+						<div class="authorImage">
+							<img src="{{ image.getUrl('profileImage') }}" alt="">
+						</div>
+					{% endif %}
+					<div class="text">
+						<div class="author">
+							<a href="#authorinfo" class="js-scrollTo">By {{ author.title }}</a>
+						</div>
+						<div class="date">
+							{{ entry.postDate | date("M d, Y") }}
+						</div>
+					</div>
+				</div>
+				<div class="infoShare">
+					{# Socials #}
+					{% include '03-components/_socials.twig' with {
+						'color': 'black'
+					} %}
+				</div>
+			</div>
+		{% endif %}
+	</div>
+{% endif %}
+
+{# Content blocks #}
+{% include '03-components/_content-blocks.twig' %}
+
+{# Author bottom #}
+{% if entry.section.handle == "articles" %}
+	{% if entry.selectedAuthor | length  %}
+		{% set author = entry.selectedAuthor.one() %}
+		<div class="authorInfoBlock container" id="authorinfo">
+			<div class="info">
+				{% set image = author.profileImage[0] %}
+				{% if image | length %}
+					<div class="authorImage">
+						<img src="{{ image.getUrl('profileImage') }}" alt="">
+					</div>
+				{% endif %}
+				<div class="text">
+					<p><strong>About {{ author.title }}</strong></p>
+					{{ author.authorDescription }}
+				</div>
+			</div>
+		</div>
+	{% endif %}
+{% endif %}
+
+{# =============================== /END Content ============================================ #}
+{% endblock %}

@@ -1,0 +1,9 @@
+format: null
+handle: bannerSquare
+height: 300
+interlace: none
+mode: crop
+name: 'Banner square'
+position: center-center
+quality: 82
+width: 300

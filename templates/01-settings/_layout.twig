@@ -1,0 +1,51 @@
+{# ================================== Global variables ============================================== #}
+{# Language #}
+{% set dutch = "" %}
+{% set english = "" %}
+{% if craft.app.language == 'nl' %}
+	{% set dutch = "dutch" %}
+{% elseif craft.app.language == 'en' %}
+	{% set english = "english" %}
+{% endif %}
+
+{# Environment #}
+{% set environment = getenv('ENVIRONMENT') %}
+
+{# Current section #}
+{% set currentMainSection = craft.app.request.getSegment(1)  %}
+{% set currentSubSection = craft.app.request.getSegment(2)  %}
+
+{# ================================== Begin template ============================================== #}
+{% include '01-settings/_head.twig' %}
+<body {{ bodyColor }}>
+{% hook 'after-body-start' %}
+	<svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><use xlink:href="/svg/icons.svg"></use></svg>
+
+	{# Google Tag Manager #}
+	{% if settings.googleTagManager.codeForInBody | length and craft.cookieConsent.getConsent(craft.app.sites.currentSite.handle|lower ~ '-statistics') %}
+		{{ settings.googleTagManager.codeForInBody | raw }}
+	{% endif %}
+
+	{% include '02-buildingblocks/_header.twig' %}
+	{% include '02-buildingblocks/_mobilenav.twig' %}
+
+	<main>
+		{% block content %}
+			{# ================================== Content ============================================== #}
+			{# ===================================== 🤓 ================================================ #}
+			{# =============================== /END Content ============================================ #}
+		{% endblock %}
+
+		{% include '02-buildingblocks/_footer.twig' %}
+	</main>
+
+	<!-- jQuery -->
+	<script src="/js/jquery-3.7.1.min.js"></script>
+
+	<!-- Javascript -->
+	<script src="/js/general-min.js?v=4"></script>
+
+	<!-- Google Analytics -->
+
+</body>
+</html>

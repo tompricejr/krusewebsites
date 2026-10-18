@@ -1,0 +1,40 @@
+contentColumnType: string
+fieldGroup: 3dec455d-985a-4e62-bdf5-7d7b7b6cb34b # Settings
+handle: defaultColors
+instructions: ''
+name: 'Default colors'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - d565737b-1539-4a59-84b4-3e2abfb427e9
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - da2ed7d8-d35a-47e7-9f1d-dc3257db5085
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - ceef8abf-73a7-4c50-81ae-b85f5154a4dd
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_defaultcolors}}'
+  fieldLayout: table
+  maxRows: ''
+  minRows: ''
+  propagationMethod: none
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

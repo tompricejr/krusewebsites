@@ -1,0 +1,32 @@
+<div class="productCard {{ subCategory}}" {{ color }}>
+	<div class="image">
+		<a href="{{ url }}">
+			<img src="{{ image.getUrl('productMedium') }}" alt="{{ title }}">
+		</a>
+	</div>
+	<div class="productCardDetails">
+		{% if isBestSeller %}
+			<div class="cardLabel"><span>Best Seller</span></div>
+		{% endif %}
+
+		<div class="brand">{{ brand }}</div>
+		<div class="title">
+			<a href="{{ url }}">{{ title }}</a>
+		</div>
+		{% if availableSizes | length %}
+			<div class="size">
+				<ul>
+					{% for size in availableSizes %}
+						<li><span>{{ size.value }}</span></li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endif %}
+		<div class="link">
+			<a href="{{ url }}" class="button medium black">
+				<span>View product</span>
+			</a>
+		</div>
+	</div>
+	<a href="{{ url }}" class="productlink"></a>
+</div>

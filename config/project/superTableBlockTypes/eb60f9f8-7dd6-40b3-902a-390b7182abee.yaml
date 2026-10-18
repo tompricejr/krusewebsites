@@ -1,0 +1,274 @@
+field: 5f9659af-693c-4eb6-88aa-8579979dd0cc
+fieldLayouts:
+  5a68f328-ece0-4497-93c3-edc3cae7fca0:
+    tabs:
+      -
+        fields:
+          4d92ec56-9694-4dd8-bd99-41e98b65604b:
+            required: false
+            sortOrder: 1
+          520227e7-1c05-4292-8df4-802798ebd604:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  4d92ec56-9694-4dd8-bd99-41e98b65604b:
+    contentColumnType: text
+    fieldGroup: null
+    handle: linkField
+    instructions: ''
+    name: Button
+    searchable: true
+    settings:
+      allowCustomText: '1'
+      allowTarget: '1'
+      allowedLinkNames:
+        1: asset
+        2: category
+        3: entry
+        7: email
+        8: tel
+        9: url
+      autoNoReferrer: ''
+      defaultLinkName: entry
+      defaultText: ''
+      enableAriaLabel: ''
+      enableTitle: ''
+      typeSettings:
+        __assoc__:
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+                -
+                  - allowCustomQuery
+                  - ''
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+                -
+                  - allowCustomQuery
+                  - ''
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+                -
+                  - allowCustomQuery
+                  - ''
+          -
+            - site
+            -
+              __assoc__:
+                -
+                  - sites
+                  - '*'
+          -
+            - user
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+                -
+                  - allowCustomQuery
+                  - ''
+          -
+            - custom
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+                -
+                  - allowAliases
+                  - ''
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+                -
+                  - allowAliases
+                  - ''
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+                -
+                  - allowAliases
+                  - ''
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+                -
+                  - allowAliases
+                  - ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: typedlinkfield\fields\LinkField
+  520227e7-1c05-4292-8df4-802798ebd604:
+    contentColumnType: string
+    fieldGroup: null
+    handle: color
+    instructions: ''
+    name: Color
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Black
+            -
+              - value
+              - black
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - White
+            -
+              - value
+              - white
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Brand color'
+            -
+              - value
+              - color-00
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Color 01'
+            -
+              - value
+              - color-01
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Color 02'
+            -
+              - value
+              - color-02
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Color 03'
+            -
+              - value
+              - color-03
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Color 04'
+            -
+              - value
+              - color-04
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Color 05'
+            -
+              - value
+              - color-05
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Color 06'
+            -
+              - value
+              - color-06
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Color 07'
+            -
+              - value
+              - color-07
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Color 08'
+            -
+              - value
+              - color-08
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Color 09'
+            -
+              - value
+              - color-09
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Dropdown

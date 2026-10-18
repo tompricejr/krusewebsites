@@ -1,0 +1,44 @@
+field: 2139379e-ad7e-4fda-995e-69fbcf84ae8a
+fieldLayouts:
+  ebbffb31-a29e-40a1-aafd-90db904f6ec2:
+    tabs:
+      -
+        fields:
+          17f7d6d8-93f1-4124-84e3-b22f5489f373:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  17f7d6d8-93f1-4124-84e3-b22f5489f373:
+    contentColumnType: string
+    fieldGroup: null
+    handle: selectedVideo
+    instructions: 'Only YouTube or Vimeo allowed. Make sure to add the embedded video first by clicking the embed button in the asset window.'
+    name: 'Select embedded video'
+    searchable: false
+    settings:
+      allowedKinds:
+        - json
+      defaultUploadLocationSource: 'volume:adb77d58-066b-4ab9-b058-d5d7d19c3b34'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: '1'
+      restrictFiles: '1'
+      selectionLabel: 'Select embedded video'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:adb77d58-066b-4ab9-b058-d5d7d19c3b34'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: videoBlock
+name: Video
+sortOrder: 7

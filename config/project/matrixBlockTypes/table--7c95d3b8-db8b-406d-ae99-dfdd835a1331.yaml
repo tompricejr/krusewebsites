@@ -1,0 +1,92 @@
+field: 68898887-55b0-4d1e-acec-98f7c0aadc81
+fieldLayouts:
+  ae787c6c-4fbf-4766-94f5-2fc573481257:
+    tabs:
+      -
+        fields:
+          1edc01fc-6948-42cd-a3c3-cb762ea720d6:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  1edc01fc-6948-42cd-a3c3-cb762ea720d6:
+    contentColumnType: text
+    fieldGroup: null
+    handle: table
+    instructions: ''
+    name: Table
+    searchable: true
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Index
+                -
+                  - handle
+                  - index
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Value 1'
+                -
+                  - handle
+                  - value1
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col3
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Value 2'
+                -
+                  - handle
+                  - value2
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+            -
+              - col3
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Table
+handle: table
+name: Table
+sortOrder: 2

@@ -1,0 +1,49 @@
+field: 2139379e-ad7e-4fda-995e-69fbcf84ae8a
+fieldLayouts:
+  d67fe52d-173f-4b21-97de-29a2223c50ec:
+    tabs:
+      -
+        fields:
+          2fa8db49-688e-45d1-b3c1-79629cb32a51:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  2fa8db49-688e-45d1-b3c1-79629cb32a51:
+    contentColumnType: string
+    fieldGroup: null
+    handle: buttons
+    instructions: ''
+    name: Buttons
+    searchable: true
+    settings:
+      columns:
+        __assoc__:
+          -
+            - d4fcef50-6e61-405f-8beb-7946c769d549
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - dfefb64e-8154-48a7-bb37-a48990aae58c
+            -
+              __assoc__:
+                -
+                  - width
+                  - 200px
+      contentTable: '{{%stc_6_buttons}}'
+      fieldLayout: table
+      maxRows: ''
+      minRows: '1'
+      propagationMethod: none
+      selectionLabel: 'Add button'
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: buttonBlock
+name: Button
+sortOrder: 5

@@ -1,0 +1,38 @@
+field: 68898887-55b0-4d1e-acec-98f7c0aadc81
+fieldLayouts:
+  0c6b780a-2702-4ca1-826b-071eb98f1c69:
+    tabs:
+      -
+        fields:
+          f7cf3daf-9472-400d-97a6-52f814499cc3:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  f7cf3daf-9472-400d-97a6-52f814499cc3:
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: ''
+    name: Text
+    searchable: true
+    settings:
+      availableTransforms: ''
+      availableVolumes: ''
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+handle: text
+name: Text
+sortOrder: 1

@@ -1,0 +1,41 @@
+fieldLayouts:
+  be59ea23-2ed1-4922-af7f-3c86cedcdda1:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: New
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: b2591d8f-ee51-4d22-b55a-2323ca76a2e3
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 2139379e-ad7e-4fda-995e-69fbcf84ae8a
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Thank you page'
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 3020db56-fc8a-49e9-bdb0-e595750d1c51
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Footer
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 422123e3-b9b8-484c-8525-9def72a0f73b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Mailchimp
+        sortOrder: 3
+handle: newsletter
+hasTitleField: false
+name: Newsletter
+section: 597b43fa-7c4b-4c10-a22d-7f1f131fe880
+sortOrder: 1
+titleFormat: '{section.name|raw}'

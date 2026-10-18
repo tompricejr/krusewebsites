@@ -1,0 +1,89 @@
+field: da47649f-27de-4421-9952-2dc261cb916c
+fieldLayouts:
+  31738623-82e9-44c1-b90c-224975fd586a:
+    tabs:
+      -
+        fields:
+          06c06148-42cf-4fcb-a048-bd4c50cd8578:
+            required: false
+            sortOrder: 4
+          41ca86d8-be08-4cec-9f41-3f87f1d29baf:
+            required: false
+            sortOrder: 3
+          774a950b-a752-4192-b1c8-3ba0185e2212:
+            required: false
+            sortOrder: 5
+          1336d251-2f48-418f-9376-57305268d83e:
+            required: false
+            sortOrder: 1
+          a279844d-51f2-4bbd-8671-9e218980b2bf:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  06c06148-42cf-4fcb-a048-bd4c50cd8578:
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: linkedin
+    instructions: ''
+    name: LinkedIn
+    searchable: false
+    settings:
+      maxLength: '255'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Url
+  41ca86d8-be08-4cec-9f41-3f87f1d29baf:
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: twitter
+    instructions: ''
+    name: Twitter
+    searchable: false
+    settings:
+      maxLength: '255'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Url
+  774a950b-a752-4192-b1c8-3ba0185e2212:
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: youtube
+    instructions: ''
+    name: YouTube
+    searchable: false
+    settings:
+      maxLength: '255'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Url
+  1336d251-2f48-418f-9376-57305268d83e:
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: facebook
+    instructions: ''
+    name: Facebook
+    searchable: false
+    settings:
+      maxLength: '255'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Url
+  a279844d-51f2-4bbd-8671-9e218980b2bf:
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: instagram
+    instructions: ''
+    name: Instagram
+    searchable: false
+    settings:
+      maxLength: '255'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Url

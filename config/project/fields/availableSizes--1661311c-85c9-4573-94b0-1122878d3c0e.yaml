@@ -1,0 +1,222 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 0c63b45b-1f9d-4eed-82a4-77d9d80fd599
+handle: availableSizes
+instructions: ''
+name: 'Available sizes'
+searchable: false
+settings:
+  multi: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - '3 lb'
+        -
+          - value
+          - 3lb
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '4 lb'
+        -
+          - value
+          - 4lb
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '12 lb'
+        -
+          - value
+          - 12lb
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '16 lb'
+        -
+          - value
+          - 16lb
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '20 lb'
+        -
+          - value
+          - 20Lb
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '24 lb'
+        -
+          - value
+          - 24Lb
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '25 lb'
+        -
+          - value
+          - 25lb
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '30 lb'
+        -
+          - value
+          - 30lb
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '33 lb'
+        -
+          - value
+          - 33Lb
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '40 lb'
+        -
+          - value
+          - 40lb
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '50 lb'
+        -
+          - value
+          - 50lb
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '60 lb'
+        -
+          - value
+          - 60Lb
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '70 lb'
+        -
+          - value
+          - 70Lb
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '75 lb'
+        -
+          - value
+          - 75Lb
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '80 lb'
+        -
+          - value
+          - 80Lb
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '125 lb'
+        -
+          - value
+          - 125Lb
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '250 lb'
+        -
+          - value
+          - 250Lb
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '1 gal'
+        -
+          - value
+          - 1Gal
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '5 gal'
+        -
+          - value
+          - 5Gal
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Checkboxes

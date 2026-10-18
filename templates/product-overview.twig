@@ -1,0 +1,141 @@
+{# Set entry #}
+{% if entry is not defined %}
+  {% set entry = craft.entries.section("productOverview").one() %}
+{% endif %}
+
+{# Body color #}
+{% set bodyColor = 'style=color:'~entry.categoryColor %}
+
+{% extends "01-settings/_layout" %}
+{% block content %}
+
+	{% set lastSegment = craft.app.request.segments | last %}
+	{% if currentSite.handle == 'feedkruse' or currentSite.handle == 'krusesPerfection' %}
+		{% set productCategories = craft.entries.section("productCategories").level(1).all() %}
+	{% else %}
+		{% set productCategories = craft.entries.section("productCategories").all() %}
+	{% endif %}
+	{% set productSubCategories = "" %}
+	{% set showproducts = [] %}
+	{% set currentCategory = '' %}
+
+	{% switch currentSite.handle %}
+	  {% case "feedkruse" %}
+	  	{% set allSiteProducts = craft.entries().site('*').section('products') %}
+	  	{% set showproducts = allSiteProducts %}
+	  {% default %}
+	  	{% set showproducts = craft.entries.section('products') %}
+  {% endswitch %}
+
+  {% if lastSegment != '' %}
+  	{% set currentCategory = craft.entries.site('*').section('productCategories').slug(lastSegment).one() %}
+  	{% set showproducts = showproducts.relatedTo(currentCategory) %}
+	{% endif %}
+
+	{% if currentCategory != '' %}
+		{% set productSubCategories = craft.entries.section("productCategories").descendantOf(entry.id).all() %}
+	{% endif %}
+
+	{% paginate showproducts.limit(24) as pagination, products %}
+
+  {# Hero #}
+	{% set overviewText = craft.entries.section("productOverview").one() %}
+	{% if isCategory is defined and isCategory %}
+	  {% include '03-components/_hero.twig' with {
+	    'titleShort': overviewText.titleShort,
+	    'titleLong': entry.title
+	  } %}
+	{% else %}
+	  {% include '03-components/_hero.twig' with {
+	    'titleShort': overviewText.titleShort,
+	    'titleLong': overviewText.titleLong
+	  } %}
+	{% endif %}
+
+	{% if productCategories | length > 0 %}
+	  <div class="filtersBlock container">
+      <div class="filters">
+        <ul class="filterList">
+        	<li class="filter {% if lastSegment == "products" %}is-active{% endif %}">
+            <a href="{{ siteUrl }}products">
+              <span>All</span>
+            </a>
+          </li>
+          {% for category in productCategories %}
+          	{% if showproducts.relatedTo(category) | length %}
+	            <li class="filter {% if lastSegment == category.slug %}is-active{% endif %}">
+	              <a href="/products/{{ category.slug }}">
+	                <span>{{ category.title }}</span>
+	              </a>
+	            </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        {% if productSubCategories | length > 0 %}
+					<ul class="subFilterList">
+						<li class="filter is-active">
+							<button type="button" data-filter="">
+								<span>All</span>
+							</button>
+						</li>
+
+						{% for subCategory in productSubCategories %}
+							<li class="filter">
+								<button type="button" data-filter=".has-filter-{{ subCategory.slug }}">
+									<span>{{ subCategory.title }}</span>
+								</button>
+							</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+      </div>
+    </div>
+	{% endif %}
+
+	<div class="productsListBlock container">
+			{% for product in products %}
+	  
+	    {# Color #}
+	    {% set color = '' %}
+	    {% if product.productColor | length %}
+	      {% set color = 'style=color:'~product.productColor %}
+	    {% else %}
+	      {% if product.productSelectedCategory | length %}
+	        {% set color = 'style=color:'~product.productSelectedCategory[0].categoryColor %}
+	      {% endif %}
+	    {% endif %}
+
+	    {% set brandTitle = "" %}
+	    {% if product.productSelectedBrand | length %}
+	      {% set brandTitle = product.productSelectedBrand[0].title %}
+	    {% endif %}
+
+	    {% set subCategory = "" %}
+	    {% if product.productSelectedSubCategory | length %}
+	      {% set subCategory = "has-filter-" ~ product.productSelectedSubCategory[0].slug %}
+	    {% endif %}
+	    {% set productUri = '/'~(product.uri) %}
+	    {% include '03-components/_productcard.twig' with {
+	      'title': product.title,
+	      'brand': brandTitle,
+	      'image': product.productImage[0],
+	      'url': productUri,
+	      'availableSizes': product.availableSizes,
+	      'color': color,
+	      'subCategory': subCategory,
+	      'isBestSeller': product.productBestSeller
+	    } %}
+	  {% else %}
+	    <div style="text-align: center; width: 100%;">No products found.</div>
+	  {% endfor %}
+	</div>
+
+	{% include '03-components/_pagination.twig' %}
+	{% if currentSite.handle != "feedkruse" %}
+	  {# Pagination #}
+	  
+	{% endif %}
+
+	{# Content blocks #}
+	{% include '03-components/_content-blocks.twig' %}
+{% endblock %}

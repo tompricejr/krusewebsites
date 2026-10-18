@@ -1,0 +1,8 @@
+handle: media
+hasUrls: true
+name: Media
+settings:
+  path: '@webroot/media'
+sortOrder: 1
+type: craft\volumes\Local
+url: /media

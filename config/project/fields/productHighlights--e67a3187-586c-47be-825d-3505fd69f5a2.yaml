@@ -1,0 +1,33 @@
+contentColumnType: string
+fieldGroup: 0c63b45b-1f9d-4eed-82a4-77d9d80fd599
+handle: productHighlights
+instructions: 'For example ''Vitamins & Minerals - For a complete fortified diet''. '
+name: Highlights
+searchable: true
+settings:
+  columns:
+    __assoc__:
+      -
+        - 0e2d7f47-1321-4edb-8d25-4fa98ef97fa6
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 83972b38-013e-47f5-a06c-811210e0db23
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_producthighlights}}'
+  fieldLayout: table
+  maxRows: ''
+  minRows: ''
+  propagationMethod: none
+  selectionLabel: 'Add highlight'
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

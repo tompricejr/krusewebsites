@@ -1,0 +1,46 @@
+{% if pagination.totalPages > 1 %}
+	<div class="container">
+		<ul class="pagination">
+			{% if pagination.prevUrl %}
+				<li class="page-item prev">
+					<a href="{{ pagination.prevUrl }}">
+						<svg class="icon-chevron-left"><use xlink:href="/svg/icons.svg#icon-chevron-left"></use></svg>
+						Previous
+					</a>
+				</li>
+			{% endif %}
+
+
+			{% for page, url in pagination.getPrevUrls(5) %}
+				<li class="page-item">
+					<a href="{{ url }}">
+						{{ page }}
+					</a>
+				</li>
+			{% endfor %}
+
+			<li class="page-item is-active">
+				<div>
+					{{ pagination.currentPage }}
+				</div>
+			</li>
+
+			{% for page, url in pagination.getNextUrls(5) %}
+				<li class="page-item">
+					<a href="{{ url }}">
+						{{ page }}
+					</a>
+				</li>
+			{% endfor %}
+
+			{% if pagination.nextUrl %}
+				<li class="page-item next">
+					<a href="{{ pagination.nextUrl }}">
+						Next
+						<svg class="icon-chevron-right"><use xlink:href="/svg/icons.svg#icon-chevron-right"></use></svg>
+					</a>
+				</li>
+			{% endif %}
+		</ul>
+	</div>
+{% endif %}

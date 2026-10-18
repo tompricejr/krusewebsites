@@ -1,0 +1,9 @@
+format: png
+handle: favicon
+height: 64
+interlace: none
+mode: crop
+name: Favicon
+position: center-center
+quality: 100
+width: 64

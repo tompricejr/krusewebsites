@@ -1,0 +1,19 @@
+contentColumnType: string
+fieldGroup: 33d27ffd-546a-4a4f-9768-4f7b049a6f0b
+handle: bannerSelectedCategory
+instructions: 'By selecting a category the button on this banner will have the same background color'
+name: 'Related category'
+searchable: false
+settings:
+  limit: '1'
+  localizeRelations: '1'
+  selectionLabel: 'Select category'
+  source: null
+  sources:
+    - 'section:7f85c3db-04ca-4a94-8e8f-758802f13562' # Product categories
+  targetSiteId: null
+  validateRelatedElements: ''
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

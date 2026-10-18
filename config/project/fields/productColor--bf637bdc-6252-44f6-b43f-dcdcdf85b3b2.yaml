@@ -1,0 +1,11 @@
+contentColumnType: string(7)
+fieldGroup: 0c63b45b-1f9d-4eed-82a4-77d9d80fd599
+handle: productColor
+instructions: 'This value will overwrite the color set by the related category. Useful when there are no categories but a background color is needed.'
+name: 'Product color'
+searchable: true
+settings:
+  defaultColor: ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Color

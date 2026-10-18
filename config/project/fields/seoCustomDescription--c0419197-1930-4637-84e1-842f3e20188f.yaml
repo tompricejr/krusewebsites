@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 584abf09-a9cc-4d87-8729-081ecdd8fda7
+handle: seoCustomDescription
+instructions: ''
+name: 'SEO custom description'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

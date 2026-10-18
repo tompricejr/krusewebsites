@@ -1,0 +1,101 @@
+assets:
+  tempVolumeUid: adb77d58-066b-4ab9-b058-d5d7d19c3b34
+dateModified: 1784177248
+email:
+  fromEmail: tom@middlestate.com
+  fromName: 'Kruse website manager'
+  replyToEmail: null
+  template: ''
+  transportSettings:
+    command: ''
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    3dec455d-985a-4e62-bdf5-7d7b7b6cb34b: Settings # Settings
+    7f85c3db-04ca-4a94-8e8f-758802f13562: 'Product categories' # Product categories
+    416ba48f-64f2-4c52-8946-70803625148d: Settings # Settings
+    1661311c-85c9-4573-94b0-1122878d3c0e: 'Available sizes' # Available sizes
+    38573004-0dde-4b64-aec3-b329efe233a0: 'Social media channels' # Social media channels
+    c400e98c-6810-46ea-98c4-b317dc921433: 'Custom CSS' # Custom CSS
+    c4915d42-9171-4c0d-8a7a-9a698fd8183c: Category # Category
+    c2984609-6822-4085-90da-9acc789ca803: Navigation # Navigation
+    e7a6b270-069f-4fb0-8ad0-ce04bd129e46: 'Western Milling' # Western Milling
+plugins:
+  cookie-consent:
+    edition: standard
+    enabled: true
+    licenseKey: GZA59FSW3UE6BII1KI6UMND8
+    schemaVersion: 1.5.0
+  embeddedassets:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  expanded-singles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      expandSingles: '1'
+      redirectToEntry: '1'
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 4.4.1
+  mailchimp-subscribe:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  redactor-custom-styles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: 48N9KIKLRP6NRWH0E04GI64L
+    schemaVersion: 3.0.12
+    settings:
+      addHrefLang: true
+      addXDefaultHrefLang: true
+      cpTitlePrefix: '⚙ '
+      devModeCpTitlePrefix: '&#x1f6a7;⚙ '
+      devModeTitlePrefix: '&#x1f6a7; '
+      displayAnalysisSidebar: true
+      displayPreviewSidebar: true
+      environment: production
+      generatorEnabled: true
+      headersEnabled: true
+      lowercaseCanonicalUrl: '1'
+      maxDescriptionLength: 155
+      maxTitleLength: 70
+      pluginName: SEOmatic
+      regenerateSitemapsAutomatically: true
+      renderEnabled: true
+      separatorChar: '|'
+      sidebarDisplayPreviewTypes:
+        - google
+        - twitter
+        - facebook
+      siteGroupsSeparate: '1'
+      siteUrlOverride: ''
+      sitemapsEnabled: true
+      socialMediaPreviewTarget: true
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.1
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: Kruse
+  retryDuration: null
+  schemaVersion: 3.8.0.1
+  timeZone: America/Los_Angeles

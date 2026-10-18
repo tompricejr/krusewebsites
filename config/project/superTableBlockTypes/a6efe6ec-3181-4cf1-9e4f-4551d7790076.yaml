@@ -1,0 +1,52 @@
+field: 38327cfd-8d8d-4bd2-9a4a-7d8658544ca3
+fieldLayouts:
+  63b25063-1701-433e-9724-82b590384123:
+    tabs:
+      -
+        fields:
+          4ea0e5f1-e66c-4158-a12a-7b92447f1095:
+            required: true
+            sortOrder: 1
+          d4a1d9f2-a201-4aa1-9f7f-ce09c09f4631:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  4ea0e5f1-e66c-4158-a12a-7b92447f1095:
+    contentColumnType: string
+    fieldGroup: null
+    handle: page
+    instructions: ''
+    name: Page
+    searchable: false
+    settings:
+      limit: '1'
+      localizeRelations: '1'
+      selectionLabel: 'Select page'
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  d4a1d9f2-a201-4aa1-9f7f-ce09c09f4631:
+    contentColumnType: text
+    fieldGroup: null
+    handle: customTitle
+    instructions: ''
+    name: 'Custom navigation title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText

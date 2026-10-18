@@ -1,0 +1,51 @@
+field: e67a3187-586c-47be-825d-3505fd69f5a2
+fieldLayouts:
+  0b654aa2-c2b3-43ef-9a46-ab0ef932dce9:
+    tabs:
+      -
+        fields:
+          0e2d7f47-1321-4edb-8d25-4fa98ef97fa6:
+            required: true
+            sortOrder: 1
+          83972b38-013e-47f5-a06c-811210e0db23:
+            required: true
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  0e2d7f47-1321-4edb-8d25-4fa98ef97fa6:
+    contentColumnType: text
+    fieldGroup: null
+    handle: highlightTitle
+    instructions: ''
+    name: Title
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  83972b38-013e-47f5-a06c-811210e0db23:
+    contentColumnType: text
+    fieldGroup: null
+    handle: highlightDescription
+    instructions: ''
+    name: Description
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText

@@ -1,0 +1,19 @@
+contentColumnType: string
+fieldGroup: 0c63b45b-1f9d-4eed-82a4-77d9d80fd599
+handle: productSelectedSubCategory
+instructions: 'Make sure to select only sub categories that are children of the main category selected above.'
+name: 'Sub category'
+searchable: false
+settings:
+  limit: ''
+  localizeRelations: '1'
+  selectionLabel: 'Select sub category '
+  source: null
+  sources:
+    - 'section:7f85c3db-04ca-4a94-8e8f-758802f13562' # Product categories
+  targetSiteId: null
+  validateRelatedElements: ''
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

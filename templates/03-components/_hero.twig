@@ -1,0 +1,77 @@
+{% if entry.imageVideo | length %}
+{% set imageVideo = entry.imageVideo.one() %}
+	<div class="hero has-visual">
+		<div class="container">
+			<div class="text">
+				<div class="shade"></div>
+				<div class="wrapper">
+					<h1>
+						<span class="largeTxt">
+							{% if titleLong | length %}
+								{{ titleLong }}
+							{% else %}
+								{{ titleShort }}
+							{% endif %}
+						</span>
+					</h1>
+
+					{% if entry.buttons | length %}
+						<div class="buttons">
+							{% set buttons = entry.buttons.all() %}
+							{% for button in buttons %}
+								{% include '03-components/_button.twig' with {
+									'url': button.linkField.getUrl(),
+									'target': button.linkField.getTarget(),
+									'text': button.linkField.text,
+									'color': button.color.value,
+									'size': 'large'
+								} %}
+							{% endfor %}
+						</div>
+					{% endif %}
+				</div>
+			</div>
+
+			<div class="visual">
+				<div class="shade"></div>
+
+				{% if imageVideo.extension == "json" %}
+					<div class="video">
+						{% set video = craft.embeddedAssets.get(entry.imageVideo.one()) %}
+						{% if video.providerName == "YouTube" or video.providerName == "Vimeo" %}
+							<div class="plyrVideo" data-plyr-provider="{{video.providerName | lower }}" data-plyr-embed-id="{{video.url}}"></div>
+						{% endif %}
+					</div>
+				{% else %}
+					<div class="image">
+						{% if imageVideo.extension == "svg" %}
+							<img src="{{ imageVideo.url }}" alt="">
+						{% else %}
+							<img src="{{ imageVideo.getUrl('heroLarge') }}" sizes="100vw" srcset="
+								{{ imageVideo.getUrl('heroSmall') }} {{ imageVideo.getWidth('heroSmall') }}w,
+								{{ imageVideo.getUrl('heroMedium') }} {{ imageVideo.getWidth('heroMedium') }}w,
+								{{ imageVideo.getUrl('heroLarge') }} {{ imageVideo.getWidth('heroLarge') }}w"
+							alt="">
+						{% endif %}
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% else %}
+	<div class="hero empty"></div>
+
+	<div class="pageHeading">
+		<div class="container">
+			<div class="text">
+				<div class="shade"></div>
+				<div class="wrapper">
+					<h1>
+						<span class="smallTxt">{{ titleShort }}</span>
+						<span class="largeTxt">{{ titleLong }}</span>
+					</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endif %}

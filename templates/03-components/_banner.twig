@@ -1,0 +1,27 @@
+<div class="banner">
+	{% if image | length %}
+		<a href="{{ url }}">
+			<img src="{{ image.getUrl('bannerSquare') }}" class="image" alt="{{ title }}">
+		</a>
+	{% endif %}
+	<div class="text">
+		{% if label | length %}
+			<div class="label">{{ label }}</div>
+		{% endif %}
+		<div class="h2">
+			<a href="{{ url }}">{{ title }}</a>
+		</div>
+
+		{% if buttonColor | length %}
+			{% set buttonColor = 'style=border-color:white;color:white;background-color:'~buttonColor %}
+			<a href="{{ url }}" class="button large" {{ buttonColor }}>
+				<span>{{ buttonText }}</span>
+			</a>
+		{% else %}
+			<a href="{{ url }}" class="button large black">
+				<span>{{ buttonText }}</span>
+			</a>
+		{% endif %}
+
+	</div>
+</div>

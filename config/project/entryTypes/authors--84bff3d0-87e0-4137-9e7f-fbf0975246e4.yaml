@@ -1,0 +1,25 @@
+fieldLayouts:
+  e1d96632-02dd-4538-af43-9db1bad2f3ab:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: 'Author full name'
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 468a93fc-f5eb-48f3-888d-50dd8209f212
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 2c15cfb7-e7e8-4713-ad03-d2d82122cc44
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Authors
+        sortOrder: 1
+handle: authors
+hasTitleField: true
+name: Authors
+section: 675bb285-7ddd-476e-956b-ff49bc9ea992
+sortOrder: 1
+titleFormat: ''

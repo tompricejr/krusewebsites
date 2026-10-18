@@ -1,0 +1,142 @@
+field: 2139379e-ad7e-4fda-995e-69fbcf84ae8a
+fieldLayouts:
+  6bc5c59b-177e-4a0b-b5f9-eb3921c33848:
+    tabs:
+      -
+        fields:
+          1673b970-4a39-43e4-856a-c2d96983adb1:
+            required: false
+            sortOrder: 2
+          f37dea28-b415-4f49-bda1-b01c31786be1:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  1673b970-4a39-43e4-856a-c2d96983adb1:
+    contentColumnType: string
+    fieldGroup: null
+    handle: rightSide
+    instructions: 'If an image is selected then ''text'', ''button'' and ''button color'' will not be shown. Regardless of whether they are filled in.'
+    name: 'Right side'
+    searchable: true
+    settings:
+      columns:
+        __assoc__:
+          -
+            - 44025d56-51c9-4c14-a093-66d0422b698d
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - aa7435c5-cd14-4252-9eb5-9863ff52554a
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 361372a4-4790-4310-a80e-19758fd4c146
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - bd2db8e1-b836-4829-964b-06fb7a86a3a9
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 4397ec8a-6f1e-4bbd-ad8d-38a36cd0d6a4
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 3ff89f87-9d14-4456-be12-fe7fdf975597
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_7_rightside}}'
+      fieldLayout: row
+      maxRows: ''
+      minRows: ''
+      propagationMethod: all
+      selectionLabel: ''
+      staticField: '1'
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  f37dea28-b415-4f49-bda1-b01c31786be1:
+    contentColumnType: string
+    fieldGroup: null
+    handle: leftSide
+    instructions: 'If an image is selected then ''text'', ''button'' and ''button color'' will not be shown. Regardless of whether they are filled in.'
+    name: 'Left side'
+    searchable: true
+    settings:
+      columns:
+        __assoc__:
+          -
+            - 5bf86d71-3a45-423d-88b3-6013efaebcb4
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - edfbbc60-8a7f-4bc3-942a-3bf9af8dcde3
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 8e5ca054-a767-44af-9eea-b1c242257927
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - b5be32a3-083a-4c43-a78c-285a9b176a3d
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 31a52bef-0d1f-4ef2-a4d8-63c409590b25
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - c580d165-1b18-4fe2-a25f-9eca94e5b2e5
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_7_leftside}}'
+      fieldLayout: row
+      maxRows: ''
+      minRows: ''
+      propagationMethod: none
+      selectionLabel: ''
+      staticField: '1'
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: sideBySideBlock
+name: 'Side by Side'
+sortOrder: 4

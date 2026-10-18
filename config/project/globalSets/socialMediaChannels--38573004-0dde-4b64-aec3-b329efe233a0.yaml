@@ -1,0 +1,13 @@
+fieldLayouts:
+  c136f654-d936-4d0c-bbe1-0de638be1aaa:
+    tabs:
+      -
+        fields:
+          da47649f-27de-4421-9952-2dc261cb916c:
+            required: false
+            sortOrder: 1
+        name: 'Social media channels'
+        sortOrder: 1
+handle: socialMediaChannels
+name: 'Social media channels'
+sortOrder: 3

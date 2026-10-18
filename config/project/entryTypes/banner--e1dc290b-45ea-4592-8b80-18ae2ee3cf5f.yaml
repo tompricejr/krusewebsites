@@ -1,0 +1,37 @@
+fieldLayouts:
+  c481b2da-a7f6-4306-8202-95edad563930:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: 'Banner title'
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: caa86151-54b6-4de6-a446-54bd5a4bf033
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 5efa42ab-aa6d-4a7d-8122-b6b7b970d413
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 58c50f70-30bf-43a7-aead-6ab77601f269
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: abaa3128-8e4f-4ef9-a54a-85b1f58c9978
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: c8ce733f-5e59-49ab-b83b-d6d6ff73bb33
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Banner
+        sortOrder: 1
+handle: banner
+hasTitleField: true
+name: Banner
+section: f5e9cf9e-3c6a-4b31-9cd5-c0e5e3b9f7a2
+sortOrder: 1
+titleFormat: ''
